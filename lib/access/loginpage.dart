@@ -1,25 +1,11 @@
-import 'dart:html';
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:chikupiku/access/accessPresenter.dart';
+import 'package:chikupiku/access/signup.dart';
+import 'package:chikupiku/access/forgotPassword.dart';
+import 'package:chikupiku/homePage.dart';
 
 class LoginPage extends StatelessWidget{
   @override
-  // final userEmail = TextEditingController();
-  // final userPassword = TextEditingController();
-  //
-  // getItemAndNavigate(BuildContext context){
-  //   Navigator.push(
-  //       context,
-  //       MaterialPageRoute(
-  //           builder: (context) => accessPresenter(
-  //
-  //           )
-  //       )
-  //   );
-  // }
-
-  String value;
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,7 +73,7 @@ class LoginPage extends StatelessWidget{
                       filled: false,
                     ),
                     onChanged: (text){
-                      value = text;
+                      //value = text;
                     },
                   ),
                 ],
@@ -145,10 +131,10 @@ class LoginPage extends StatelessWidget{
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => accessPresenter(value : value)),
+                            builder: (context) => HomePage(),
+                          ),
                         );
                       },
-                      // onPressed:()=> accessPresenter(value : value),
                       child: Text(
                         "LOGIN",
                         style: TextStyle(
@@ -169,48 +155,59 @@ class LoginPage extends StatelessWidget{
                 SizedBox(
                   height: 20.0,
                 ),
-                Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
+                FlatButton(
+                  child: Text(
+                    "Forgot Password?",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.normal,
+                    ),
                   ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ForgotPassword(),
+                      ),
+                    );
+                  },
                 ),
               ],
             ),
 
             SizedBox(
-              height: 40.0,
-            ),
-
-            //Again Login
-            Padding(
-              child:
-              Text(
-                "Already have an account? ",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                ),
-              ),
+              height: 20.0,
             ),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  "Already have an account? ",
+                  "Don't have an account?",
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white,
                   ),
                 ),
-                Text(
-                  "Login",
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
+
+                FlatButton(
+                  child: Text(
+                    "Sign Up",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                      fontWeight: FontWeight.normal,
+                    ),
                   ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SignUpPage(),
+                      ),
+                    );
+                  },
                 ),
               ],
             ),
