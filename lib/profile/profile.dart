@@ -8,12 +8,26 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.indigo,
+
+      appBar: AppBar(
+        title: Text(
+          "Chiku Piku",
+          style: TextStyle(
+            fontSize: 24,
+          ),
+        ),
+        leading: Icon(
+          Icons.menu,
+          size: 30.0,
+        ),
+      ),
+
       body: SafeArea(
         child: ListView(
           children: <Widget>[
 
             SizedBox(
-              height: 30.0,
+              height: 50.0,
             ),
 
             //Profile Picture
@@ -22,13 +36,17 @@ class ProfilePage extends StatelessWidget {
               height: 130,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                image: DecorationImage(
-                    image: ExactAssetImage('assets/profile.jpg'),
-                    fit: BoxFit.contain,
-                ),
+                color: Colors.white,
+                // image: DecorationImage(
+                //     image: ExactAssetImage('assets/profile.jpg'),
+                //     fit: BoxFit.contain,
+                // ),
               ),
             ),
 
+            SizedBox(
+              height: 20.0,
+            ),
             //Full Name
             Padding(
               padding: EdgeInsets.only(
