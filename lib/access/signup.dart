@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:chikupiku/access/loginpage.dart';
+import 'package:chikupiku/profile/profile.dart';
 
 class SignUpPage extends StatelessWidget{
   @override
@@ -189,14 +190,14 @@ class SignUpPage extends StatelessWidget{
                     disabledColor: Colors.blue,
                     child: RaisedButton(
                       disabledElevation: 4.0,
-                      // onPressed: () {
-                      //   Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => accessPresenter(value : value)),
-                      //   );
-                      // },
-                      // onPressed:()=> accessPresenter(value : value),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ProfilePage(),
+                          ),
+                        );
+                      },
                       child: Text(
                         "SIGN UP",
                         style: TextStyle(
