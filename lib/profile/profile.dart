@@ -197,6 +197,10 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
 
+            SizedBox(
+              height: 40.0,
+            ),
+
           ],
         ),
       ),
