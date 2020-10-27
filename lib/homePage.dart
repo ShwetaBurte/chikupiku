@@ -27,9 +27,9 @@ class HomePage extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(
             top: 10.0,
-            left: 10.0,
-            bottom: 10.0,
-            right: 10.0,
+            left: 5.0,
+            bottom: 5.0,
+            right: 5.0,
           ),
           child: ListView(
             children: <Widget>[
@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
                               },
                               child:Image.asset(
                                 "assets/homeBanner.png",
-                                width: 380.0,
+                                width: 392.0,
                                 height: 180.0,
                                 fit: BoxFit.cover,
                               ),
@@ -69,12 +69,14 @@ class HomePage extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
+
+                  //Audio Stories
                   Padding(
                     // padding: const EdgeInsets.all(0.0),
                     padding: const EdgeInsets.only(
-                      top: 10.0,
+                      top: 5.0,
                       left: 0.0,
-                      bottom: 5.0,
+                      bottom: 0.0,
                       right: 0.0,
                     ),
                     child: Align(
@@ -90,7 +92,7 @@ class HomePage extends StatelessWidget {
                               },
                               child: Image.asset(
                                 "assets/audioStories.jpg",
-                                width: 185.0,
+                                width: 192.0,
                                 height: 180.0,
                                 fit: BoxFit.cover,
                               ),
@@ -100,11 +102,13 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
+
+                  //Video Stories
                   Padding(
                     padding: const EdgeInsets.only(
-                      top: 10.0,
+                      top: 5.0,
                       left: 0.0,
-                      bottom: 5.0,
+                      bottom: 0.0,
                       right: 0.0,
                     ),
                     child: Align(
@@ -119,8 +123,8 @@ class HomePage extends StatelessWidget {
                                   print('Card tapped.');
                                 },
                                 child: Image.asset(
-                                  "assets/videostories.jpg",
-                                  width: 185.0,
+                                  "assets/videoStories.jpg",
+                                  width: 192.0,
                                   height: 180.0,
                                   fit: BoxFit.cover,
                                 ),
@@ -130,6 +134,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
+
                 ],
               ),
 
@@ -137,11 +142,13 @@ class HomePage extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
+
+                  //Blogs
                   Padding(
                     padding: const EdgeInsets.only(
-                      top: 5.0,
+                      top: 0.0,
                       left: 0.0,
-                      bottom: 10.0,
+                      bottom: 5.0,
                       right: 0.0,
                     ),
                     child: Align(
@@ -157,7 +164,7 @@ class HomePage extends StatelessWidget {
                               },
                               child: Image.asset(
                                 "assets/toys.jpg",
-                                width: 185.0,
+                                width: 192.0,
                                 height: 180.0,
                                 fit: BoxFit.cover,
                               ),
@@ -167,11 +174,13 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
+
+                  //Blogs
                   Padding(
                     padding: const EdgeInsets.only(
-                      top: 5.0,
+                      top: 0.0,
                       left: 0.0,
-                      bottom: 10.0,
+                      bottom: 5.0,
                       right: 0.0,
                     ),
                     child: Align(
@@ -187,7 +196,7 @@ class HomePage extends StatelessWidget {
                                 },
                               child: Image.asset(
                                 "assets/events.jpg",
-                                width: 185.0,
+                                width: 192.0,
                                 height: 180.0,
                                 fit: BoxFit.cover,
                               ),
@@ -203,173 +212,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-        /*ListView(
-          children: <Widget>[
-
-            //Banner Row
-            Row(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(0.0),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: EdgeInsets.all(0.0),
-                      child: Center(
-                        child: Card(
-                          child: InkWell(
-                            splashColor: Colors.blue.withAlpha(0),
-                            onTap: () {
-                              print('Card tapped.');
-                            },
-                            child:Image.asset(
-                              "assets/homeBanner.png",
-                              width: 380.0,
-                              height: 180.0,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-
-            // Audio Video
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Padding(
-                  // padding: const EdgeInsets.all(0.0),
-                  padding: const EdgeInsets.only(
-                    top: 10.0,
-                    left: 0.0,
-                    bottom: 5.0,
-                    right: 0.0,
-                  ),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: EdgeInsets.all(0.0),
-                      child: Center(
-                        child: Card(
-                          child: InkWell(
-                            splashColor: Colors.blue.withAlpha(0),
-                            onTap: () {
-                              print('Card tapped.');
-                            },
-                            child:Container(
-                              width: 185.0,
-                              height: 180.0,
-                              color: Colors.orangeAccent,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 10.0,
-                    left: 0.0,
-                    bottom: 5.0,
-                    right: 0.0,
-                  ),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: EdgeInsets.all(0.0),
-                      child: Center(
-                        child: Card(
-                          child: InkWell(
-                              splashColor: Colors.blue.withAlpha(0),
-                              onTap: () {
-                                print('Card tapped.');
-                              },
-                              child:Container(
-                                width: 185.0,
-                                height: 180.0,
-                                color: Colors.lightBlueAccent,
-                              )
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-
-            //Bolgs And Blogs
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 5.0,
-                    left: 0.0,
-                    bottom: 10.0,
-                    right: 0.0,
-                  ),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: EdgeInsets.all(0.0),
-                      child: Center(
-                        child: Card(
-                          child: InkWell(
-                            splashColor: Colors.blue.withAlpha(0),
-                            onTap: () {
-                              print('Card tapped.');
-                            },
-                            child:Container(
-                              width: 185.0,
-                              height: 180.0,
-                              color: Colors.orangeAccent,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 5.0,
-                    left: 0.0,
-                    bottom: 10.0,
-                    right: 0.0,
-                  ),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: EdgeInsets.all(0.0),
-                      child: Center(
-                        child: Card(
-                          child: InkWell(
-                              splashColor: Colors.blue.withAlpha(0),
-                              onTap: () {
-                                print('Card tapped.');
-                              },
-                              child:Container(
-                                width: 185.0,
-                                height: 180.0,
-                                color: Colors.lightBlueAccent,
-                              )
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-
-          ],
-        ),*/
       ),
 
     );
