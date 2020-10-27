@@ -1,9 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   @override
-  // String value;
+  _ProfilePageState createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  TextEditingController dateCtl = TextEditingController();
+
+  _showDateTimePicker() async {
+    await showDatePicker(
+      context: context,
+      initialDate: new DateTime.now(),
+      firstDate: new DateTime(1960),
+      lastDate: new DateTime(2050),
+    );
+
+    setState(() {});
+  }
+  @override
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,6 +63,7 @@ class ProfilePage extends StatelessWidget {
             SizedBox(
               height: 20.0,
             ),
+
             //Full Name
             Padding(
               padding: EdgeInsets.only(
@@ -83,7 +100,7 @@ class ProfilePage extends StatelessWidget {
                 top: 10.0,
                 left: 40.0,
                 right: 40.0,
-                bottom: 15.0,
+                bottom: 10.0,
               ),
               child: Column(
                 children: <Widget>[
@@ -103,6 +120,85 @@ class ProfilePage extends StatelessWidget {
                       filled: false,
                     ),
                   ),
+                ],
+              ),
+            ),
+
+            //Birthdate
+            Padding(
+            padding: EdgeInsets.only(
+              top: 10.0,
+              left: 40.0,
+              right: 40.0,
+              bottom: 15.0,
+              ),
+              child: Column(
+                children: <Widget>[
+                  // FlatButton(
+                  //   child:
+                  //   Text(
+                  //     "Birthdate",
+                  //     style: TextStyle(
+                  //       fontSize: 18,
+                  //       color: Colors.white,
+                  //       fontWeight: FontWeight.normal,
+                  //     ),
+                  //   ),
+                  //   shape: Border(
+                  //     bottom: BorderSide(color: Colors.white,width: 1),
+                  //   ),
+                  //   onPressed: () => _showDateTimePicker(),
+                  // ),
+
+                  // TextField(
+                  //   style: TextStyle(color: Colors.white),
+                  //   decoration: InputDecoration(
+                  //     enabledBorder: UnderlineInputBorder(
+                  //       borderSide: BorderSide(
+                  //         color: Colors.white,
+                  //       ),
+                  //     ),
+                  //     labelText: "Birthdate",
+                  //     labelStyle: TextStyle(
+                  //       fontSize: 18,
+                  //       color: Colors.white,
+                  //     ),
+                  //     filled: false,
+                  //   ),
+                  //   onTap: () => _showDateTimePicker(),
+                  // ),
+
+                  TextField(
+                    controller: dateCtl,
+                    // decoration: InputDecoration(
+                    //   labelText: "Date of birth",
+                    //   hintText: "Ex. Insert your dob",),
+                    style: TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.white,
+                        ),
+                      ),
+                      labelText: "Birthdate",
+                      labelStyle: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white,
+                      ),
+                      filled: false,
+                    ),
+                    onTap: () async{
+                      DateTime date = DateTime(1900);
+                      // FocusScope.of(context).requestFocus(new FocusNode());
+
+                      date = await showDatePicker(
+                          context: context,
+                          initialDate:DateTime.now(),
+                          firstDate:DateTime(1900),
+                          lastDate: DateTime(2100));
+
+                      dateCtl.text = date.toIso8601String();},)
+
                 ],
               ),
             ),
