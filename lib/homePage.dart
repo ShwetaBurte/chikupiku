@@ -1,5 +1,7 @@
 // import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:chikupiku/audioStories/audioStories.dart';
+import 'package:chikupiku/videoStories/videoStories.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -26,7 +28,7 @@ class HomePage extends StatelessWidget {
         child:
         Padding(
           padding: const EdgeInsets.only(
-            top: 10.0,
+            top: 5.0,
             left: 5.0,
             bottom: 5.0,
             right: 5.0,
@@ -89,6 +91,11 @@ class HomePage extends StatelessWidget {
                               splashColor: Colors.blue.withAlpha(0),
                               onTap: () {
                                 print('Card tapped.');
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => audioStories()),
+                                );
                               },
                               child: Image.asset(
                                 "assets/audioStories.jpg",
@@ -121,6 +128,11 @@ class HomePage extends StatelessWidget {
                                 splashColor: Colors.blue.withAlpha(0),
                                 onTap: () {
                                   print('Card tapped.');
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => videoStories()),
+                                  );
                                 },
                                 child: Image.asset(
                                   "assets/videoStories.jpg",
