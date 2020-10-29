@@ -134,40 +134,6 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               child: Column(
                 children: <Widget>[
-                  // FlatButton(
-                  //   child:
-                  //   Text(
-                  //     "Birthdate",
-                  //     style: TextStyle(
-                  //       fontSize: 18,
-                  //       color: Colors.white,
-                  //       fontWeight: FontWeight.normal,
-                  //     ),
-                  //   ),
-                  //   shape: Border(
-                  //     bottom: BorderSide(color: Colors.white,width: 1),
-                  //   ),
-                  //   onPressed: () => _showDateTimePicker(),
-                  // ),
-
-                  // TextField(
-                  //   style: TextStyle(color: Colors.white),
-                  //   decoration: InputDecoration(
-                  //     enabledBorder: UnderlineInputBorder(
-                  //       borderSide: BorderSide(
-                  //         color: Colors.white,
-                  //       ),
-                  //     ),
-                  //     labelText: "Birthdate",
-                  //     labelStyle: TextStyle(
-                  //       fontSize: 18,
-                  //       color: Colors.white,
-                  //     ),
-                  //     filled: false,
-                  //   ),
-                  //   onTap: () => _showDateTimePicker(),
-                  // ),
-
                   TextField(
                     controller: dateCtl,
                     // decoration: InputDecoration(
