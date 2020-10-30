@@ -168,36 +168,42 @@ class audioStories extends StatelessWidget{
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 //Image
-                                Padding(
-                                  padding: EdgeInsets.all(0.0),
-                                  child: Card(
-                                    child: InkWell(
-                                      splashColor: Colors.blue.withAlpha(0),
-                                      onTap: () {
-                                        print('Card tapped.');
-                                      },
-                                      child:Image.asset(
-                                        "assets/audioStoriesBanner.jpg",
-                                        width: 90.0,
-                                        height: 65.0,
-                                        fit: BoxFit.cover,
+                                Container(
+                                  width: 100.0,
+                                  child: Padding(
+                                    padding: EdgeInsets.all(0.0),
+                                    child: Card(
+                                      child: InkWell(
+                                        splashColor: Colors.blue.withAlpha(0),
+                                        onTap: () {
+                                          print('Card tapped.');
+                                        },
+                                        child:Image.asset(
+                                          "assets/audioStoriesBanner.jpg",
+                                          width: 90.0,
+                                          height: 65.0,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
                                 //Heading
-                                Padding(
-                                  padding: EdgeInsets.only(
-                                    left: 30.0,
-                                    top: 0.0,
-                                    right: 0.0,
-                                    bottom: 0.0,
-                                  ),
-                                  child: Text(
-                                    "Jaunary 2020",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.black,
+                                Container(
+                                  width: 200.0,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                      left: 30.0,
+                                      top: 0.0,
+                                      right: 0.0,
+                                      bottom: 0.0,
+                                    ),
+                                    child: Text(
+                                      "Jaunary 2020",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.black,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -211,36 +217,42 @@ class audioStories extends StatelessWidget{
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 //Image
-                                Padding(
-                                  padding: EdgeInsets.all(0.0),
-                                  child: Card(
-                                    child: InkWell(
-                                      splashColor: Colors.blue.withAlpha(0),
-                                      onTap: () {
-                                        print('Card tapped.');
-                                      },
-                                      child:Image.asset(
-                                        "assets/audioStoriesBanner.jpg",
-                                        width: 90.0,
-                                        height: 65.0,
-                                        fit: BoxFit.cover,
+                                Container(
+                                  width: 100.0,
+                                  child: Padding(
+                                    padding: EdgeInsets.all(0.0),
+                                    child: Card(
+                                      child: InkWell(
+                                        splashColor: Colors.blue.withAlpha(0),
+                                        onTap: () {
+                                          print('Card tapped.');
+                                        },
+                                        child:Image.asset(
+                                          "assets/audioStoriesBanner.jpg",
+                                          width: 90.0,
+                                          height: 65.0,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
                                 //Heading
-                                Padding(
-                                  padding: EdgeInsets.only(
-                                    left: 30.0,
-                                    top: 0.0,
-                                    right: 0.0,
-                                    bottom: 0.0,
-                                  ),
-                                  child: Text(
-                                    "Jaunary 2020",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.black,
+                                Container(
+                                  width: 200.0,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                      left: 30.0,
+                                      top: 0.0,
+                                      right: 0.0,
+                                      bottom: 0.0,
+                                    ),
+                                    child: Text(
+                                      "February 2020",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.black,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -254,36 +266,42 @@ class audioStories extends StatelessWidget{
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 //Image
-                                Padding(
-                                  padding: EdgeInsets.all(0.0),
-                                  child: Card(
-                                    child: InkWell(
-                                      splashColor: Colors.blue.withAlpha(0),
-                                      onTap: () {
-                                        print('Card tapped.');
-                                      },
-                                      child:Image.asset(
-                                        "assets/audioStoriesBanner.jpg",
-                                        width: 90.0,
-                                        height: 65.0,
-                                        fit: BoxFit.cover,
+                                Container(
+                                  width: 100.0,
+                                  child: Padding(
+                                    padding: EdgeInsets.all(0.0),
+                                    child: Card(
+                                      child: InkWell(
+                                        splashColor: Colors.blue.withAlpha(0),
+                                        onTap: () {
+                                          print('Card tapped.');
+                                        },
+                                        child:Image.asset(
+                                          "assets/audioStoriesBanner.jpg",
+                                          width: 90.0,
+                                          height: 65.0,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
                                 //Heading
-                                Padding(
-                                  padding: EdgeInsets.only(
-                                    left: 30.0,
-                                    top: 0.0,
-                                    right: 0.0,
-                                    bottom: 0.0,
-                                  ),
-                                  child: Text(
-                                    "Jaunary 2020",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.black,
+                                Container(
+                                  width: 200.0,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                      left: 30.0,
+                                      top: 0.0,
+                                      right: 0.0,
+                                      bottom: 0.0,
+                                    ),
+                                    child: Text(
+                                      "December 2019",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.black,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -297,36 +315,42 @@ class audioStories extends StatelessWidget{
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 //Image
-                                Padding(
-                                  padding: EdgeInsets.all(0.0),
-                                  child: Card(
-                                    child: InkWell(
-                                      splashColor: Colors.blue.withAlpha(0),
-                                      onTap: () {
-                                        print('Card tapped.');
-                                      },
-                                      child:Image.asset(
-                                        "assets/audioStoriesBanner.jpg",
-                                        width: 90.0,
-                                        height: 65.0,
-                                        fit: BoxFit.cover,
+                                Container(
+                                  width: 100.0,
+                                  child: Padding(
+                                    padding: EdgeInsets.all(0.0),
+                                    child: Card(
+                                      child: InkWell(
+                                        splashColor: Colors.blue.withAlpha(0),
+                                        onTap: () {
+                                          print('Card tapped.');
+                                        },
+                                        child:Image.asset(
+                                          "assets/audioStoriesBanner.jpg",
+                                          width: 90.0,
+                                          height: 65.0,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
                                 //Heading
-                                Padding(
-                                  padding: EdgeInsets.only(
-                                    left: 30.0,
-                                    top: 0.0,
-                                    right: 0.0,
-                                    bottom: 0.0,
-                                  ),
-                                  child: Text(
-                                    "Jaunary 2020",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.black,
+                                Container(
+                                  width: 200.0,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                      left: 30.0,
+                                      top: 0.0,
+                                      right: 0.0,
+                                      bottom: 0.0,
+                                    ),
+                                    child: Text(
+                                      "Diwali Ank",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.black,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -340,36 +364,42 @@ class audioStories extends StatelessWidget{
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 //Image
-                                Padding(
-                                  padding: EdgeInsets.all(0.0),
-                                  child: Card(
-                                    child: InkWell(
-                                      splashColor: Colors.blue.withAlpha(0),
-                                      onTap: () {
-                                        print('Card tapped.');
-                                      },
-                                      child:Image.asset(
-                                        "assets/audioStoriesBanner.jpg",
-                                        width: 90.0,
-                                        height: 65.0,
-                                        fit: BoxFit.cover,
+                                Container(
+                                  width: 100.0,
+                                  child: Padding(
+                                    padding: EdgeInsets.all(0.0),
+                                    child: Card(
+                                      child: InkWell(
+                                        splashColor: Colors.blue.withAlpha(0),
+                                        onTap: () {
+                                          print('Card tapped.');
+                                        },
+                                        child:Image.asset(
+                                          "assets/audioStoriesBanner.jpg",
+                                          width: 90.0,
+                                          height: 65.0,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
                                 //Heading
-                                Padding(
-                                  padding: EdgeInsets.only(
-                                    left: 30.0,
-                                    top: 0.0,
-                                    right: 0.0,
-                                    bottom: 0.0,
-                                  ),
-                                  child: Text(
-                                    "Jaunary 2020",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.black,
+                                Container(
+                                  width: 200.0,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                      left: 30.0,
+                                      top: 0.0,
+                                      right: 0.0,
+                                      bottom: 0.0,
+                                    ),
+                                    child: Text(
+                                      "September 2019",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.black,
+                                      ),
                                     ),
                                   ),
                                 ),
