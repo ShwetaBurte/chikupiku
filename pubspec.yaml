@@ -55,6 +55,11 @@ flutter:
     - assets/profile.jpg
     - assets/audioStoriesBanner.jpg
     - assets/videoStoriesBanner.jpg
+    - assets/January2020.jpg
+    - assets/February2020.jpg
+    - assets/December2019.jpg
+    - assets/DiwaliAnk.jpg
+    - assets/September2019.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
