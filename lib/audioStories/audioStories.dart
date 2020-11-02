@@ -1,9 +1,17 @@
 // import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:chikupiku/audioStories/displayAudio.dart';
 
 class audioStories extends StatelessWidget{
   @override
+
+  final value1 = 'January 2020';
+  final value2 = 'February 2020';
+  final value3 = 'December 2019';
+  final value4 = 'Diwali Ank';
+  final value5 = 'September 2019';
+
   Widget build(BuildContext context) {
     return Scaffold(
 
@@ -14,9 +22,14 @@ class audioStories extends StatelessWidget{
             fontSize: 24,
           ),
         ),
-        leading: Icon(
-          Icons.arrow_back,
-          size: 30.0,
+        leading: InkWell(
+          onTap: (){
+            Navigator.pop(context);
+          },
+          child: Icon(
+            Icons.arrow_back,
+            size: 30.0,
+          ),
         ),
       ),
 
@@ -164,50 +177,61 @@ class audioStories extends StatelessWidget{
                           Padding(
                             padding: EdgeInsets.all(10.0),
                             child:
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                //Image
-                                Container(
-                                  width: 100.0,
-                                  child: Padding(
-                                    padding: EdgeInsets.all(0.0),
-                                    child: Card(
-                                      child: InkWell(
-                                        splashColor: Colors.blue.withAlpha(0),
-                                        onTap: () {
-                                          print('Card tapped.');
-                                        },
-                                        child:Image.asset(
-                                          "assets/audioStoriesBanner.jpg",
-                                          width: 90.0,
-                                          height: 65.0,
-                                          fit: BoxFit.cover,
+                            InkWell(
+                              onTap: () {
+                                print('Card tapped.');
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => displayAudio(value1)
+                                ),
+                                );
+                              },
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  //Image
+                                  Container(
+                                    width: 100.0,
+                                    child: Padding(
+                                      padding: EdgeInsets.all(0.0),
+                                      child: Card(
+                                        child: InkWell(
+                                          splashColor: Colors.blue.withAlpha(0),
+                                          onTap: () {
+                                            print('Card tapped.');
+                                          },
+                                          child:Image.asset(
+                                            "assets/January2020.jpg",
+                                            width: 90.0,
+                                            height: 65.0,
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
-                                ),
-                                //Heading
-                                Container(
-                                  width: 200.0,
-                                  child: Padding(
-                                    padding: EdgeInsets.only(
-                                      left: 30.0,
-                                      top: 0.0,
-                                      right: 0.0,
-                                      bottom: 0.0,
-                                    ),
-                                    child: Text(
-                                      "Jaunary 2020",
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.black,
+                                  //Heading
+                                  Container(
+                                    width: 200.0,
+                                    child: Padding(
+                                      padding: EdgeInsets.only(
+                                        left: 30.0,
+                                        top: 0.0,
+                                        right: 0.0,
+                                        bottom: 0.0,
+                                      ),
+                                      child: Text(
+                                        '$value1',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.black,
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                           Padding(
@@ -228,7 +252,7 @@ class audioStories extends StatelessWidget{
                                           print('Card tapped.');
                                         },
                                         child:Image.asset(
-                                          "assets/audioStoriesBanner.jpg",
+                                          "assets/February2020.jpg",
                                           width: 90.0,
                                           height: 65.0,
                                           fit: BoxFit.cover,
@@ -277,7 +301,7 @@ class audioStories extends StatelessWidget{
                                           print('Card tapped.');
                                         },
                                         child:Image.asset(
-                                          "assets/audioStoriesBanner.jpg",
+                                          "assets/December2019.jpg",
                                           width: 90.0,
                                           height: 65.0,
                                           fit: BoxFit.cover,
@@ -326,7 +350,7 @@ class audioStories extends StatelessWidget{
                                           print('Card tapped.');
                                         },
                                         child:Image.asset(
-                                          "assets/audioStoriesBanner.jpg",
+                                          "assets/DiwaliAnk.jpg",
                                           width: 90.0,
                                           height: 65.0,
                                           fit: BoxFit.cover,
@@ -375,7 +399,7 @@ class audioStories extends StatelessWidget{
                                           print('Card tapped.');
                                         },
                                         child:Image.asset(
-                                          "assets/audioStoriesBanner.jpg",
+                                          "assets/September2019.jpg",
                                           width: 90.0,
                                           height: 65.0,
                                           fit: BoxFit.cover,
