@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class videoStories extends StatelessWidget {
+  final value1 = 'January 2020';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,9 +13,14 @@ class videoStories extends StatelessWidget {
             fontSize: 24,
           ),
         ),
-        leading: Icon(
-          Icons.arrow_back,
-          size: 30.0,
+        leading: InkWell(
+          onTap: (){
+            Navigator.pop(context);
+          },
+          child: Icon(
+            Icons.arrow_back,
+            size: 30.0,
+          ),
         ),
       ),
 
@@ -62,19 +68,78 @@ class videoStories extends StatelessWidget {
                 ],
               ),
 
-              //  Magzine Names
               Row(
-                children: [
-                Padding(
-                  padding: EdgeInsets.only(
-                    left: 0.0,
-                    top: 10.0,
-                    bottom: 0.0,
-                    right: 0.0,
-                  ),
-                  child:
-                    Column(
-                      children: <Widget>[
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(
+                        left: 0.0,
+                        top: 10.0,
+                        bottom: 0.0,
+                        right: 0.0,
+                      ),
+                      child:
+                      Column(
+                        children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.all(10.0),
+                            child:
+                            InkWell(
+                              onTap: () {
+                                print('Card tapped.');
+                                // Navigator.push(
+                                //   context,
+                                //   MaterialPageRoute(
+                                //       builder: (context) => displayAudio(value1)
+                                //   ),
+                                // );
+                              },
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  //Image
+                                  Container(
+                                    width: 100.0,
+                                    child: Padding(
+                                      padding: EdgeInsets.all(0.0),
+                                      child: Card(
+                                        child: InkWell(
+                                          splashColor: Colors.blue.withAlpha(0),
+                                          onTap: () {
+                                            print('Card tapped.');
+                                          },
+                                          child:Image.asset(
+                                            "assets/January2020.jpg",
+                                            width: 90.0,
+                                            height: 65.0,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  //Heading
+                                  Container(
+                                    width: 200.0,
+                                    child: Padding(
+                                      padding: EdgeInsets.only(
+                                        left: 30.0,
+                                        top: 0.0,
+                                        right: 0.0,
+                                        bottom: 0.0,
+                                      ),
+                                      child: Text(
+                                        '$value1',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
                           Padding(
                             padding: EdgeInsets.all(10.0),
                             child:
@@ -93,7 +158,7 @@ class videoStories extends StatelessWidget {
                                           print('Card tapped.');
                                         },
                                         child:Image.asset(
-                                          "assets/audioStoriesBanner.jpg",
+                                          "assets/February2020.jpg",
                                           width: 90.0,
                                           height: 65.0,
                                           fit: BoxFit.cover,
@@ -113,7 +178,7 @@ class videoStories extends StatelessWidget {
                                       bottom: 0.0,
                                     ),
                                     child: Text(
-                                      "Jaunary 2020",
+                                      "February 2020",
                                       style: TextStyle(
                                         fontSize: 20,
                                         color: Colors.black,
@@ -142,7 +207,7 @@ class videoStories extends StatelessWidget {
                                           print('Card tapped.');
                                         },
                                         child:Image.asset(
-                                          "assets/audioStoriesBanner.jpg",
+                                          "assets/December2019.jpg",
                                           width: 90.0,
                                           height: 65.0,
                                           fit: BoxFit.cover,
@@ -162,7 +227,7 @@ class videoStories extends StatelessWidget {
                                       bottom: 0.0,
                                     ),
                                     child: Text(
-                                      "Jaunary 2020",
+                                      "December 2019",
                                       style: TextStyle(
                                         fontSize: 20,
                                         color: Colors.black,
@@ -191,7 +256,7 @@ class videoStories extends StatelessWidget {
                                           print('Card tapped.');
                                         },
                                         child:Image.asset(
-                                          "assets/audioStoriesBanner.jpg",
+                                          "assets/DiwaliAnk.jpg",
                                           width: 90.0,
                                           height: 65.0,
                                           fit: BoxFit.cover,
@@ -211,7 +276,7 @@ class videoStories extends StatelessWidget {
                                       bottom: 0.0,
                                     ),
                                     child: Text(
-                                      "Jaunary 2020",
+                                      "Diwali Ank",
                                       style: TextStyle(
                                         fontSize: 20,
                                         color: Colors.black,
@@ -240,7 +305,7 @@ class videoStories extends StatelessWidget {
                                           print('Card tapped.');
                                         },
                                         child:Image.asset(
-                                          "assets/audioStoriesBanner.jpg",
+                                          "assets/September2019.jpg",
                                           width: 90.0,
                                           height: 65.0,
                                           fit: BoxFit.cover,
@@ -260,7 +325,7 @@ class videoStories extends StatelessWidget {
                                       bottom: 0.0,
                                     ),
                                     child: Text(
-                                      "Jaunary 2020",
+                                      "September 2019",
                                       style: TextStyle(
                                         fontSize: 20,
                                         color: Colors.black,
@@ -271,60 +336,276 @@ class videoStories extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsets.all(10.0),
-                            child:
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                //Image
-                                Container(
-                                  width: 100.0,
-                                  child: Padding(
-                                    padding: EdgeInsets.all(0.0),
-                                    child: Card(
-                                      child: InkWell(
-                                        splashColor: Colors.blue.withAlpha(0),
-                                        onTap: () {
-                                          print('Card tapped.');
-                                        },
-                                        child:Image.asset(
-                                          "assets/audioStoriesBanner.jpg",
-                                          width: 90.0,
-                                          height: 65.0,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                //Heading
-                                Container(
-                                  width: 200.0,
-                                  child: Padding(
-                                    padding: EdgeInsets.only(
-                                      left: 30.0,
-                                      top: 0.0,
-                                      right: 0.0,
-                                      bottom: 0.0,
-                                    ),
-                                    child: Text(
-                                      "Jaunary 2020",
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.black,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                ],
-              ),
+                  ],
+                ),
+
+              //  Magzine Names
+              // Row(
+              //   children: [
+              //   Padding(
+              //     padding: EdgeInsets.only(
+              //       left: 0.0,
+              //       top: 10.0,
+              //       bottom: 0.0,
+              //       right: 0.0,
+              //     ),
+              //     child:
+              //       Column(
+              //         children: <Widget>[
+              //             Padding(
+              //               padding: EdgeInsets.all(10.0),
+              //               child:
+              //               Row(
+              //                 mainAxisAlignment: MainAxisAlignment.center,
+              //                 children: [
+              //                   //Image
+              //                   Container(
+              //                     width: 100.0,
+              //                     child: Padding(
+              //                       padding: EdgeInsets.all(0.0),
+              //                       child: Card(
+              //                         child: InkWell(
+              //                           splashColor: Colors.blue.withAlpha(0),
+              //                           onTap: () {
+              //                             print('Card tapped.');
+              //                           },
+              //                           child:Image.asset(
+              //                             "assets/audioStoriesBanner.jpg",
+              //                             width: 90.0,
+              //                             height: 65.0,
+              //                             fit: BoxFit.cover,
+              //                           ),
+              //                         ),
+              //                       ),
+              //                     ),
+              //                   ),
+              //                   //Heading
+              //                   Container(
+              //                     width: 200.0,
+              //                     child: Padding(
+              //                       padding: EdgeInsets.only(
+              //                         left: 30.0,
+              //                         top: 0.0,
+              //                         right: 0.0,
+              //                         bottom: 0.0,
+              //                       ),
+              //                       child: Text(
+              //                         "Jaunary 2020",
+              //                         style: TextStyle(
+              //                           fontSize: 20,
+              //                           color: Colors.black,
+              //                         ),
+              //                       ),
+              //                     ),
+              //                   ),
+              //                 ],
+              //               ),
+              //             ),
+              //             Padding(
+              //               padding: EdgeInsets.all(10.0),
+              //               child:
+              //               Row(
+              //                 mainAxisAlignment: MainAxisAlignment.center,
+              //                 children: [
+              //                   //Image
+              //                   Container(
+              //                     width: 100.0,
+              //                     child: Padding(
+              //                       padding: EdgeInsets.all(0.0),
+              //                       child: Card(
+              //                         child: InkWell(
+              //                           splashColor: Colors.blue.withAlpha(0),
+              //                           onTap: () {
+              //                             print('Card tapped.');
+              //                           },
+              //                           child:Image.asset(
+              //                             "assets/audioStoriesBanner.jpg",
+              //                             width: 90.0,
+              //                             height: 65.0,
+              //                             fit: BoxFit.cover,
+              //                           ),
+              //                         ),
+              //                       ),
+              //                     ),
+              //                   ),
+              //                   //Heading
+              //                   Container(
+              //                     width: 200.0,
+              //                     child: Padding(
+              //                       padding: EdgeInsets.only(
+              //                         left: 30.0,
+              //                         top: 0.0,
+              //                         right: 0.0,
+              //                         bottom: 0.0,
+              //                       ),
+              //                       child: Text(
+              //                         "Jaunary 2020",
+              //                         style: TextStyle(
+              //                           fontSize: 20,
+              //                           color: Colors.black,
+              //                         ),
+              //                       ),
+              //                     ),
+              //                   ),
+              //                 ],
+              //               ),
+              //             ),
+              //             Padding(
+              //               padding: EdgeInsets.all(10.0),
+              //               child:
+              //               Row(
+              //                 mainAxisAlignment: MainAxisAlignment.center,
+              //                 children: [
+              //                   //Image
+              //                   Container(
+              //                     width: 100.0,
+              //                     child: Padding(
+              //                       padding: EdgeInsets.all(0.0),
+              //                       child: Card(
+              //                         child: InkWell(
+              //                           splashColor: Colors.blue.withAlpha(0),
+              //                           onTap: () {
+              //                             print('Card tapped.');
+              //                           },
+              //                           child:Image.asset(
+              //                             "assets/audioStoriesBanner.jpg",
+              //                             width: 90.0,
+              //                             height: 65.0,
+              //                             fit: BoxFit.cover,
+              //                           ),
+              //                         ),
+              //                       ),
+              //                     ),
+              //                   ),
+              //                   //Heading
+              //                   Container(
+              //                     width: 200.0,
+              //                     child: Padding(
+              //                       padding: EdgeInsets.only(
+              //                         left: 30.0,
+              //                         top: 0.0,
+              //                         right: 0.0,
+              //                         bottom: 0.0,
+              //                       ),
+              //                       child: Text(
+              //                         "Jaunary 2020",
+              //                         style: TextStyle(
+              //                           fontSize: 20,
+              //                           color: Colors.black,
+              //                         ),
+              //                       ),
+              //                     ),
+              //                   ),
+              //                 ],
+              //               ),
+              //             ),
+              //             Padding(
+              //               padding: EdgeInsets.all(10.0),
+              //               child:
+              //               Row(
+              //                 mainAxisAlignment: MainAxisAlignment.center,
+              //                 children: [
+              //                   //Image
+              //                   Container(
+              //                     width: 100.0,
+              //                     child: Padding(
+              //                       padding: EdgeInsets.all(0.0),
+              //                       child: Card(
+              //                         child: InkWell(
+              //                           splashColor: Colors.blue.withAlpha(0),
+              //                           onTap: () {
+              //                             print('Card tapped.');
+              //                           },
+              //                           child:Image.asset(
+              //                             "assets/audioStoriesBanner.jpg",
+              //                             width: 90.0,
+              //                             height: 65.0,
+              //                             fit: BoxFit.cover,
+              //                           ),
+              //                         ),
+              //                       ),
+              //                     ),
+              //                   ),
+              //                   //Heading
+              //                   Container(
+              //                     width: 200.0,
+              //                     child: Padding(
+              //                       padding: EdgeInsets.only(
+              //                         left: 30.0,
+              //                         top: 0.0,
+              //                         right: 0.0,
+              //                         bottom: 0.0,
+              //                       ),
+              //                       child: Text(
+              //                         "Jaunary 2020",
+              //                         style: TextStyle(
+              //                           fontSize: 20,
+              //                           color: Colors.black,
+              //                         ),
+              //                       ),
+              //                     ),
+              //                   ),
+              //                 ],
+              //               ),
+              //             ),
+              //             Padding(
+              //               padding: EdgeInsets.all(10.0),
+              //               child:
+              //               Row(
+              //                 mainAxisAlignment: MainAxisAlignment.center,
+              //                 children: [
+              //                   //Image
+              //                   Container(
+              //                     width: 100.0,
+              //                     child: Padding(
+              //                       padding: EdgeInsets.all(0.0),
+              //                       child: Card(
+              //                         child: InkWell(
+              //                           splashColor: Colors.blue.withAlpha(0),
+              //                           onTap: () {
+              //                             print('Card tapped.');
+              //                           },
+              //                           child:Image.asset(
+              //                             "assets/audioStoriesBanner.jpg",
+              //                             width: 90.0,
+              //                             height: 65.0,
+              //                             fit: BoxFit.cover,
+              //                           ),
+              //                         ),
+              //                       ),
+              //                     ),
+              //                   ),
+              //                   //Heading
+              //                   Container(
+              //                     width: 200.0,
+              //                     child: Padding(
+              //                       padding: EdgeInsets.only(
+              //                         left: 30.0,
+              //                         top: 0.0,
+              //                         right: 0.0,
+              //                         bottom: 0.0,
+              //                       ),
+              //                       child: Text(
+              //                         "Jaunary 2020",
+              //                         style: TextStyle(
+              //                           fontSize: 20,
+              //                           color: Colors.black,
+              //                         ),
+              //                       ),
+              //                     ),
+              //                   ),
+              //                 ],
+              //               ),
+              //             ),
+              //         ],
+              //       ),
+              //     ),
+              //   ],
+              // ),
+
 
             ],
           ),
